@@ -1,0 +1,38 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{note.title}}</ion-title>
+    <ion-buttons end >
+      <button *ngIf="!newNoteFlag" ion-button icon-only (click)="onTrash()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Nome</ion-label>
+      <ion-input type="nome" [(ngModel)]="note.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>COr</ion-label>
+      <ion-input type="cor" [(ngModel)]="note.cor"></ion-input>
+    </ion-item>
+
+    <!--TErminamos o passo 14-->
+    <ion-item>
+      <ion-textarea placeholder="Placa" [(ngModel)]="note.placa"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
